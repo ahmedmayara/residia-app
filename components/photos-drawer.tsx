@@ -57,6 +57,7 @@ export function PhotosDrawer({ listing, currentUser }: PhotosDrawerProps) {
                   src={image}
                   alt=""
                   width={1200}
+                  key={image}
                   height={800}
                   style={{ objectFit: "cover", aspectRatio: "4 / 3" }}
                 />
