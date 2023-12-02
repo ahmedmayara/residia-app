@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-import Google from "next-auth/providers/Google";
 import Credentials from "next-auth/providers/credentials";
 
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -39,7 +38,6 @@ export const { handlers, auth } = NextAuth({
         return user;
       },
     }),
-    Google,
   ],
   adapter: PrismaAdapter(db),
   debug: process.env.NODE_ENV === "development",
