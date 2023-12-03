@@ -20,6 +20,8 @@ import { useSignUpDialog } from "@/hooks/useSignUpDialog";
 import { useSignInDialog } from "@/hooks/useSignInDialog";
 import { useHostDialog } from "@/hooks/useHostDialog";
 
+import { useRouter } from "next/navigation";
+
 interface UserButtonProps {
   currentUser: User | null;
 }
@@ -28,6 +30,8 @@ export function UserButton({ currentUser }: UserButtonProps) {
   const signUpDialog = useSignUpDialog();
   const signInDialog = useSignInDialog();
   const hostDialog = useHostDialog();
+
+  const router = useRouter();
 
   const handleOpenHostDialog = () => {
     if (!currentUser) {
@@ -111,7 +115,9 @@ export function UserButton({ currentUser }: UserButtonProps) {
             {currentUser && (
               <>
                 <DropdownMenuItem>My trips</DropdownMenuItem>
-                <DropdownMenuItem>My properties</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push("/properties")}>
+                  My properties
+                </DropdownMenuItem>
                 <DropdownMenuItem>My reservations</DropdownMenuItem>
                 <DropdownMenuItem>My favorites</DropdownMenuItem>
 
@@ -127,7 +133,13 @@ export function UserButton({ currentUser }: UserButtonProps) {
             {currentUser && (
               <>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => signOut()}>
+                <DropdownMenuItem
+                  onClick={() =>
+                    signOut({
+                      callbackUrl: "/",
+                    })
+                  }
+                >
                   Sign out
                 </DropdownMenuItem>
               </>
