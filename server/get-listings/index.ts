@@ -3,17 +3,17 @@
 import { db } from "@/db/prisma";
 
 export interface GetListingsParams {
-  userId?: string;
+  hostId?: string;
 }
 
 export async function getListings(params: GetListingsParams) {
   try {
-    const { userId } = params;
+    const { hostId } = params;
 
     let query: any = {};
 
-    if (userId) {
-      query.hostId = userId;
+    if (hostId) {
+      query.hostId = hostId;
     }
 
     const listings = await db.listing.findMany({
@@ -28,6 +28,6 @@ export async function getListings(params: GetListingsParams) {
 
     return listings;
   } catch (error) {
-    throw new Error("Unable to fetch listings.");
+    throw new Error("Unable to fetch listings." + error);
   }
 }
