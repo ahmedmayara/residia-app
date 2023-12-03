@@ -5,7 +5,7 @@ import React from "react";
 import { Booking, User } from "@prisma/client";
 import Image from "next/image";
 
-import { Grid3x3Icon, ShareIcon } from "lucide-react";
+import { ShareIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { ListingHeading } from "@/components/listing-heading";
