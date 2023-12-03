@@ -14,7 +14,7 @@ export default async function Properties() {
   }
 
   const listings = await getListings({
-    userId: currentUser?.id,
+    hostId: currentUser?.id,
   });
 
   if (listings.length === 0) {
