@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Container } from "@/components/container";
 import { ListingCard } from "@/components/listing-card";
 import { getCurrentUser } from "@/server/get-current-user";
