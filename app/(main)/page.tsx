@@ -1,10 +1,14 @@
 import { Container } from "@/components/container";
 import { ListingCard } from "@/components/listing-card";
 import { getCurrentUser } from "@/server/get-current-user";
-import { getListings } from "@/server/get-listings";
+import { GetListingsParams, getListings } from "@/server/get-listings";
 
-export default async function Home() {
-  const listings = await getListings();
+interface HomeProps {
+  searchParams: GetListingsParams;
+}
+
+export default async function Home({ searchParams }: HomeProps) {
+  const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
   return (
     <Container>
