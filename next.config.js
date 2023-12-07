@@ -6,10 +6,6 @@ const nextConfig = {
         protocol: "https",
         hostname: "utfs.io",
       },
-      {
-        protocol: "https",
-        hostname: "flowbite.s3.amazonaws.com",
-      },
     ],
   },
 };
