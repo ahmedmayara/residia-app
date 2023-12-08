@@ -10,7 +10,7 @@ export function Logo() {
   return (
     <Image
       onClick={() => router.push("/")}
-      className="cursor-pointer"
+      className="hidden cursor-pointer lg:block"
       src="/logo.svg"
       width={120}
       height={40}
