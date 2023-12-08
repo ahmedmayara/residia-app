@@ -46,7 +46,7 @@ export function UserButton({ currentUser }: UserButtonProps) {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className="cursor-pointer rounded-full border px-2.5 py-1.5 shadow-sm transition-all hover:shadow-md">
+          <div className="hidden cursor-pointer rounded-full border px-2.5 py-1.5 shadow-sm transition-all hover:shadow-md lg:block">
             <div className="flex flex-row items-center gap-2.5">
               <MenuIcon size={18} />
               <Avatar className="h-8 w-8">

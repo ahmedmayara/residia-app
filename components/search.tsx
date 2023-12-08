@@ -8,7 +8,7 @@ export function Search() {
   const filtersDialog = useFiltersDialog();
   return (
     <div
-      className="w-full cursor-pointer rounded-full border py-2 shadow-sm transition-all hover:shadow-md md:w-auto"
+      className="hidden cursor-pointer rounded-full border py-2 shadow-sm transition-all hover:shadow-md lg:block lg:w-auto"
       onClick={() => filtersDialog.onOpenChange(true)}
     >
       <div className="flex flex-row items-center justify-between">

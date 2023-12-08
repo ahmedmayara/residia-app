@@ -7,6 +7,7 @@ import { DialogProvider } from "@/providers/dialog-provider";
 import { Toaster } from "sonner";
 import { getCurrentUser } from "@/server/get-current-user";
 import { constructMetadata } from "@/lib/utils";
+import { MobileNavigation } from "@/components/mobile-navigation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default async function RootLayout({
         <Toaster position="bottom-center" richColors />
         <DialogProvider />
         <div className="pb-20 pt-[6.3rem]">{children}</div>
+        <MobileNavigation currentUser={currentUser} />
       </body>
     </html>
   );
