@@ -11,6 +11,7 @@ import { User } from "@prisma/client";
 import { CategoriesBar } from "../categories-bar";
 import { MobileSearch } from "../mobile-search";
 import { MobileHostButton } from "../mobile-host-button";
+import { HostButton } from "../host-button";
 
 interface NavbarProps {
   currentUser: User | null;
@@ -27,9 +28,7 @@ export function Navbar({ currentUser }: NavbarProps) {
             <MobileSearch />
             <div className="flex flex-row items-center gap-2 md:gap-4">
               <div className="hidden lg:flex">
-                <Button variant="ghost" size="sm" className="rounded-full">
-                  Become a host
-                </Button>
+                <HostButton currentUser={currentUser} />
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <GlobeIcon className="h-4 w-4" />
                 </Button>
