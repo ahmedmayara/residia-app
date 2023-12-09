@@ -9,6 +9,8 @@ import { CategoryBarItem } from "./category-bar-item";
 
 import { categories } from "@/constants";
 
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+
 export function CategoriesBar() {
   const params = useSearchParams();
   const category = params?.get("category");
@@ -21,16 +23,19 @@ export function CategoriesBar() {
   }
   return (
     <Container>
-      <div className="flex flex-row items-center justify-between overflow-x-auto pt-4">
-        {categories.map((item) => (
-          <CategoryBarItem
-            key={item.label}
-            label={item.label}
-            icon={item.icon}
-            selected={item.label === category}
-          />
-        ))}
-      </div>
+      <ScrollArea>
+        <div className="flex flex-row items-center justify-between pt-4">
+          {categories.map((item) => (
+            <CategoryBarItem
+              key={item.label}
+              label={item.label}
+              icon={item.icon}
+              selected={item.label === category}
+            />
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     </Container>
   );
 }
