@@ -28,7 +28,7 @@ export default async function RootLayout({
         <Navbar currentUser={currentUser} />
         <Toaster position="bottom-center" richColors />
         <DialogProvider />
-        <div className="pb-20 pt-[6.3rem]">{children}</div>
+        <div className="pb-20 pt-[7.5rem] lg:pt-[6.3rem]">{children}</div>
         <MobileNavigation currentUser={currentUser} />
       </body>
     </html>
