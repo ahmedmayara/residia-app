@@ -119,7 +119,9 @@ export function UserButton({ currentUser }: UserButtonProps) {
                   My properties
                 </DropdownMenuItem>
                 <DropdownMenuItem>My reservations</DropdownMenuItem>
-                <DropdownMenuItem>My favorites</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push("/favorites")}>
+                  My favorites
+                </DropdownMenuItem>
 
                 <DropdownMenuSeparator />
               </>
