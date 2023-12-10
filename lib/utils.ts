@@ -41,7 +41,6 @@ export function constructMetadata({
     },
     icons,
     metadataBase: new URL("https://residia-app.vercel.app"),
-    themeColor: "#ffffff",
     ...(noIndex && { robots: { index: false, follow: false } }),
   };
 }
