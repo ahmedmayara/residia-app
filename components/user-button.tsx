@@ -114,11 +114,12 @@ export function UserButton({ currentUser }: UserButtonProps) {
           <DropdownMenuGroup>
             {currentUser && (
               <>
-                <DropdownMenuItem>My trips</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => router.push("/trips")}>
+                  My trips
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push("/properties")}>
                   My properties
                 </DropdownMenuItem>
-                <DropdownMenuItem>My reservations</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => router.push("/favorites")}>
                   My favorites
                 </DropdownMenuItem>
