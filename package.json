@@ -23,6 +23,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@uploadthing/react": "^6.0.2",
+    "@vercel/speed-insights": "^1.0.1",
     "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
