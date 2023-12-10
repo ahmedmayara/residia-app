@@ -6,7 +6,7 @@ interface BookingsParams {
   hostId?: string;
 }
 
-export default async function getBookings(params: BookingsParams) {
+export async function getBookings(params: BookingsParams) {
   try {
     const { id, tenantId, hostId } = params;
 
