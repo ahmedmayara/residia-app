@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Navbar } from "@/components/marketing/navbar";
 import { DialogProvider } from "@/providers/dialog-provider";
 
@@ -30,6 +32,7 @@ export default async function RootLayout({
         <DialogProvider />
         <div className="pb-20 pt-[7.5rem] lg:pt-[6.3rem]">{children}</div>
         <MobileNavigation currentUser={currentUser} />
+        <SpeedInsights />
       </body>
     </html>
   );
