@@ -30,11 +30,11 @@ export function CategoryBarItem({
 
     const updatedQuery: any = {
       ...currentQuery,
-      category: label,
+      type: label,
     };
 
-    if (params?.get("category") === label) {
-      delete updatedQuery.category;
+    if (params?.get("type") === label) {
+      delete updatedQuery.type;
     }
 
     const url = qs.stringifyUrl(
