@@ -13,7 +13,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 export function CategoriesBar() {
   const params = useSearchParams();
-  const category = params?.get("category");
+  const type = params?.get("type");
   const pathname = usePathname();
 
   const isMainPage = pathname === "/";
@@ -30,7 +30,7 @@ export function CategoriesBar() {
               key={item.label}
               label={item.label}
               icon={item.icon}
-              selected={item.label === category}
+              selected={item.label === type}
             />
           ))}
         </div>

@@ -22,7 +22,7 @@ export function EmptyState({
   return (
     <div className="flex h-[80vh] flex-col items-center justify-center gap-2">
       <FaGhost className="h-16 w-16 text-muted-foreground" />
-      <h1 className="text-2xl font-semibold text-foreground">{title}</h1>
+      <h1 className="pt-1 text-2xl font-semibold text-foreground">{title}</h1>
       <p className="text-muted-foreground">{description}</p>
       {showResetButton && (
         <Button
