@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
+
 import { useHostDialog } from "@/hooks/useHostDialog";
-import React, { useMemo } from "react";
 import { Dialog } from "./dialog";
 import { DialogHeading } from "./dialog-heading";
 import { categories } from "@/constants";

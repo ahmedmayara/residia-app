@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import { User } from "@prisma/client";
 import {
   HeartIcon,
@@ -15,8 +13,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useSignInDialog } from "@/hooks/useSignInDialog";
 import { signOut } from "next-auth/react";
 import { cn } from "@/lib/utils";
-
-import Link from "next/link";
 
 interface MobileNavigationProps {
   currentUser: User | null;

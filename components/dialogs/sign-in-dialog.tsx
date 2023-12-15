@@ -30,7 +30,9 @@ import { useRouter } from "next/navigation";
 export function SignInDialog() {
   const router = useRouter();
   const [isLoading, setIsLoading] = React.useState(false);
+
   const signInDialog = useSignInDialog();
+  const signUpDialog = useSignInDialog();
 
   const signInForm = useForm<SignInSchemaType>({
     resolver: zodResolver(SignInSchema),
@@ -106,12 +108,32 @@ export function SignInDialog() {
       </Form>
     </div>
   );
+
+  const footerContent = (
+    <div className="mt-4 flex flex-col gap-4">
+      <div className="mt-2 text-center font-normal text-muted-foreground">
+        <div className="flex flex-row justify-center gap-2">
+          <h1>Don't have an account?</h1>
+          <p
+            className="cursor-pointer font-medium text-foreground hover:underline"
+            onClick={() => {
+              signInDialog.onOpenChange(false);
+              signUpDialog.onOpenChange(true);
+            }}
+          >
+            Sign up
+          </p>
+        </div>
+      </div>
+    </div>
+  );
   return (
     <Dialog
       disabled={isLoading}
       open={signInDialog.open}
       title="Sign in"
       body={bodyContent}
+      footer={footerContent}
       onClose={() => signInDialog.onOpenChange(false)}
       onSubmit={signInForm.handleSubmit(onSubmit)}
       actionLabel="Continue"
