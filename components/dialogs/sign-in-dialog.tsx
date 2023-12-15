@@ -113,7 +113,7 @@ export function SignInDialog() {
     <div className="mt-4 flex flex-col gap-4">
       <div className="mt-2 text-center font-normal text-muted-foreground">
         <div className="flex flex-row justify-center gap-2">
-          <h1>Don't have an account?</h1>
+          <h1>Don&apos;t have an account?</h1>
           <p
             className="cursor-pointer font-medium text-foreground hover:underline"
             onClick={() => {
