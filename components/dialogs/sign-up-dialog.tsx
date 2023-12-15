@@ -2,8 +2,6 @@
 
 import React from "react";
 
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 
 import { Dialog } from "./dialog";
@@ -12,7 +10,6 @@ import { DialogHeading } from "./dialog-heading";
 import { useSignUpDialog } from "@/hooks/useSignUpDialog";
 import { useSignInDialog } from "@/hooks/useSignInDialog";
 
-import { FcGoogle } from "react-icons/fc";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -141,13 +138,6 @@ export function SignUpDialog() {
 
   const footerContent = (
     <div className="mt-4 flex flex-col gap-4">
-      <Separator />
-
-      <Button variant="outline" className="relative">
-        <FcGoogle className="absolute left-4 top-3 h-4 w-4" />
-        Sign up with Google
-      </Button>
-
       <div className="mt-2 text-center font-normal text-muted-foreground">
         <div className="flex flex-row justify-center gap-2">
           <h1>Already have an account?</h1>
