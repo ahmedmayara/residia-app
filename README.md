@@ -20,7 +20,7 @@ Residia is a powerful and intuitive application designed to help you discover th
 - 📱 **Responsive**: Residia is fully responsive and works on all devices!
 - ⚡ **Fast**: Residia is built with Next.js, which provides a fast and optimized experience for users.
 - 🎨 **Tailwind Design**: Residia is designed with Tailwind CSS, which provides a clean and modern design.
-- 📄 SSR (Server Side Rendering): Residia is built with Next.js, which provides SSR out of the box.
+- 📄 **SSR (Server Side Rendering)**: Residia is built with Next.js, which provides SSR out of the box.
 - 📦 **MongoDB**: Residia uses MongoDB to store data and provides a clean and intuitive API.
 - 📦 **Prisma**: Residia uses Prisma to manage the database and provides a clean and intuitive API.
 - 🚀 **Deployment**: Residia is deployed on Vercel and is live at [residia.vercel.app](https://residia.vercel.app/).
