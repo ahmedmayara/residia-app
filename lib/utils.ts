@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export function constructMetadata({
   title = "Residia - Where Every Journey Finds Its Home.",
   description = "Discover Your Perfect Stay : Residia - Where Every Journey Finds Its Home.",
-  image = "/images/opengraph.png",
+  image = "https://residia.vercel.app/images/opengraph.png",
   icons = "/favicon.ico",
   noIndex = false,
 }: {
@@ -27,7 +27,7 @@ export function constructMetadata({
       description,
       images: [
         {
-          url: image,
+          url: "https://residia.vercel.app/images/opengraph.png",
           alt: title,
         },
       ],
@@ -40,7 +40,7 @@ export function constructMetadata({
       creator: "@ahmeedmayara",
     },
     icons,
-    metadataBase: new URL("https://residia-app.vercel.app"),
+    metadataBase: new URL("https://residia.vercel.app"),
     ...(noIndex && { robots: { index: false, follow: false } }),
   };
 }
