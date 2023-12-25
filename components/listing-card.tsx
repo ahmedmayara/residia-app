@@ -14,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import { AspectRatio } from "./ui/aspect-ratio";
 
 interface ListingCardProps {
   listing: Listing;
@@ -58,18 +59,20 @@ export function ListingCard({
   return (
     <div className="group col-span-1 cursor-pointer">
       <div className="flex w-full flex-col">
-        <Carousel className="relative aspect-square w-full overflow-hidden rounded-xl">
+        <Carousel className="relative aspect-square w-full overflow-hidden rounded-xl bg-accent">
           <CarouselContent>
             {listing.images.map((photo) => (
-              <CarouselItem key={photo} className="relative h-[300px] w-full">
-                <Image
-                  src={photo}
-                  alt={photo}
-                  fill
-                  sizes="100vw"
-                  className="h-auto w-full object-cover object-center"
-                  onClick={() => router.push(`/listings/${listing.id}`)}
-                />
+              <CarouselItem key={photo}>
+                <AspectRatio ratio={1 / 1}>
+                  <Image
+                    src={photo}
+                    alt={photo}
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover object-center"
+                    onClick={() => router.push(`/listings/${listing.id}`)}
+                  />
+                </AspectRatio>
               </CarouselItem>
             ))}
           </CarouselContent>
