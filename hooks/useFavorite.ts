@@ -1,12 +1,11 @@
-import axios from "axios";
+import { useCallback, useMemo } from "react";
 
 import { useRouter } from "next/navigation";
-import { useCallback, useMemo } from "react";
+import { User } from "@prisma/client";
+import axios from "axios";
 import { toast } from "sonner";
 
-import { User } from "@prisma/client";
-
-import { useSignInDialog } from "./useSignInDialog";
+import { useSignInDialog } from "@/hooks/useSignInDialog";
 
 interface UseFavorite {
   listingId: string;

@@ -1,10 +1,11 @@
-export const dynamic = "force-dynamic";
+import { getCurrentUser } from "@/server/get-current-user";
+import { getListings, GetListingsParams } from "@/server/get-listings";
 
 import { Container } from "@/components/container";
 import { EmptyState } from "@/components/empty-state";
 import { ListingCard } from "@/components/listing-card";
-import { getCurrentUser } from "@/server/get-current-user";
-import { GetListingsParams, getListings } from "@/server/get-listings";
+
+export const dynamic = "force-dynamic";
 
 interface HomeProps {
   searchParams: GetListingsParams;

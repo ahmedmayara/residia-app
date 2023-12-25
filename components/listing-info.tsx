@@ -2,12 +2,14 @@
 
 import React from "react";
 
-import { useCountries } from "@/hooks/useCountries";
-import { User } from "@prisma/client";
-import { Avatar, AvatarFallback } from "./ui/avatar";
-import { Separator } from "./ui/separator";
 import dynamic from "next/dynamic";
-import { Skeleton } from "./ui/skeleton";
+import { User } from "@prisma/client";
+
+import { useCountries } from "@/hooks/useCountries";
+
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Map = dynamic(() => import("./map").then((mod) => mod.Map), {
   ssr: false,

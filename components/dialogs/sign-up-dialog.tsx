@@ -2,22 +2,14 @@
 
 import React from "react";
 
-import { Input } from "@/components/ui/input";
-
-import { Dialog } from "./dialog";
-import { DialogHeading } from "./dialog-heading";
-
-import { useSignUpDialog } from "@/hooks/useSignUpDialog";
-import { useSignInDialog } from "@/hooks/useSignInDialog";
-
-import { SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-
 import { SignUpSchema, SignUpSchemaType } from "@/schemas";
-
+import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-
+import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
+
+import { useSignInDialog } from "@/hooks/useSignInDialog";
+import { useSignUpDialog } from "@/hooks/useSignUpDialog";
 
 import {
   Form,
@@ -27,6 +19,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Dialog } from "@/components/dialogs/dialog";
+import { DialogHeading } from "@/components/dialogs/dialog-heading";
 
 export function SignUpDialog() {
   const [isLoading, setIsLoading] = React.useState(false);

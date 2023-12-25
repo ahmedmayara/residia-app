@@ -1,9 +1,10 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { useParams, usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
 import React from "react";
+
+import { useParams, usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 
 export function Container({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

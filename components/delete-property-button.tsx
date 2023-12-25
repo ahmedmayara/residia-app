@@ -1,11 +1,13 @@
 "use client";
 
-import { Loader, Trash2Icon } from "lucide-react";
-import { Button } from "./ui/button";
 import React from "react";
-import axios from "axios";
-import { toast } from "sonner";
+
 import { useRouter } from "next/navigation";
+import axios from "axios";
+import { Loader, Trash2Icon } from "lucide-react";
+import { toast } from "sonner";
+
+import { Button } from "@/components/ui/button";
 
 interface DeletePropertyButtonProps {
   listingId: string;

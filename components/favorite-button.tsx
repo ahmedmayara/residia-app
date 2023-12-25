@@ -1,11 +1,13 @@
 "use client";
 
-import { useFavorite } from "@/hooks/useFavorite";
-import { cn } from "@/lib/utils";
-import { User } from "@prisma/client";
 import React from "react";
 
+import { User } from "@prisma/client";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
+import { cn } from "@/lib/utils";
+
+import { useFavorite } from "@/hooks/useFavorite";
 
 interface FavoriteButtonProps {
   listingId: string;

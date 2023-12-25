@@ -1,8 +1,8 @@
+import { getBookings } from "@/server/get-bookings";
+import { getCurrentUser } from "@/server/get-current-user";
 import { getListing } from "@/server/get-listing";
 
-import { getCurrentUser } from "@/server/get-current-user";
 import { ListingClient } from "@/components/listing-client";
-import { getBookings } from "@/server/get-bookings";
 
 interface PageProps {
   id: string;

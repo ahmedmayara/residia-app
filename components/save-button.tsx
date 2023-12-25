@@ -1,10 +1,11 @@
 "use client";
 
-import { useFavorite } from "@/hooks/useFavorite";
 import { User } from "@prisma/client";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
+import { useFavorite } from "@/hooks/useFavorite";
 
 import { Button } from "@/components/ui/button";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 interface SaveButtonProps {
   listingId: string;

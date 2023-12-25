@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-
 import { db } from "@/db/prisma";
 import { BookingSchema } from "@/schemas";
 import { getCurrentUser } from "@/server/get-current-user";

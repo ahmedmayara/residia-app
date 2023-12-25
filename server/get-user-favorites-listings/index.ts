@@ -1,6 +1,7 @@
 "use server";
 
 import { db } from "@/db/prisma";
+
 import { getCurrentUser } from "../get-current-user";
 
 export async function getUserFavoritesListings() {

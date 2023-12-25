@@ -2,12 +2,14 @@
 
 import React from "react";
 
-import { Dialog } from "./dialog";
-import { DialogHeading } from "./dialog-heading";
+import { useRouter } from "next/navigation";
+import { SignInSchema, SignInSchemaType } from "@/schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { signIn } from "next-auth/react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 import { useSignInDialog } from "@/hooks/useSignInDialog";
-
-import { toast } from "sonner";
 
 import {
   Form,
@@ -17,15 +19,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
-
-import { SubmitHandler, useForm } from "react-hook-form";
-import { SignInSchema, SignInSchemaType } from "@/schemas";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { Dialog } from "@/components/dialogs/dialog";
+import { DialogHeading } from "@/components/dialogs/dialog-heading";
 
 export function SignInDialog() {
   const router = useRouter();

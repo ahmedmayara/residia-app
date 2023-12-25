@@ -1,14 +1,15 @@
 import { Poppins } from "next/font/google";
+
 import "./globals.css";
 
+import { DialogProvider } from "@/providers/dialog-provider";
+import { getCurrentUser } from "@/server/get-current-user";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Toaster } from "sonner";
+
+import { constructMetadata } from "@/lib/utils";
 
 import { Navbar } from "@/components/marketing/navbar";
-import { DialogProvider } from "@/providers/dialog-provider";
-
-import { Toaster } from "sonner";
-import { getCurrentUser } from "@/server/get-current-user";
-import { constructMetadata } from "@/lib/utils";
 import { MobileNavigation } from "@/components/mobile-navigation";
 
 const poppins = Poppins({

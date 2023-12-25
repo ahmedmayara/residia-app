@@ -1,7 +1,7 @@
+import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db/prisma";
 import { SignUpSchema } from "@/schemas";
 import bcrypt from "bcrypt";
-import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();

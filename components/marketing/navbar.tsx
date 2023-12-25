@@ -1,17 +1,17 @@
 import React from "react";
 
+import { User } from "@prisma/client";
+import { GlobeIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { CategoriesBar } from "@/components/categories-bar";
 import { Container } from "@/components/container";
+import { HostButton } from "@/components/host-button";
 import { Logo } from "@/components/marketing/logo";
+import { MobileHostButton } from "@/components/mobile-host-button";
+import { MobileSearch } from "@/components/mobile-search";
 import { Search } from "@/components/search";
 import { UserButton } from "@/components/user-button";
-import { Button } from "@/components/ui/button";
-
-import { GlobeIcon } from "lucide-react";
-import { User } from "@prisma/client";
-import { CategoriesBar } from "../categories-bar";
-import { MobileSearch } from "../mobile-search";
-import { MobileHostButton } from "../mobile-host-button";
-import { HostButton } from "../host-button";
 
 interface NavbarProps {
   currentUser: User | null;

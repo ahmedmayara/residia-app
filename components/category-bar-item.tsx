@@ -2,9 +2,10 @@
 
 import React from "react";
 
-import qs from "query-string";
 import { useRouter, useSearchParams } from "next/navigation";
+import qs from "query-string";
 import { IconType } from "react-icons";
+
 import { cn } from "@/lib/utils";
 
 interface CategoryBarItemProps {

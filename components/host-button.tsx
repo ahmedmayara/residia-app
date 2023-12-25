@@ -4,10 +4,10 @@ import React from "react";
 
 import { User } from "@prisma/client";
 
-import { Button } from "@/components/ui/button";
-
 import { useHostDialog } from "@/hooks/useHostDialog";
 import { useSignInDialog } from "@/hooks/useSignInDialog";
+
+import { Button } from "@/components/ui/button";
 
 interface MobileHostButtonProps {
   currentUser: User | null;

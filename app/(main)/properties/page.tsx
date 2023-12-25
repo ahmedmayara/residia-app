@@ -1,10 +1,10 @@
-import { Container } from "@/components/container";
-import { EmptyState } from "@/components/empty-state";
-import { PropertyCard } from "@/components/property-card";
+import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/server/get-current-user";
 import { getListings } from "@/server/get-listings";
 
-import { redirect } from "next/navigation";
+import { Container } from "@/components/container";
+import { EmptyState } from "@/components/empty-state";
+import { PropertyCard } from "@/components/property-card";
 
 export default async function Properties() {
   const currentUser = await getCurrentUser();
