@@ -2,12 +2,13 @@
 
 import React from "react";
 
+import { User } from "@prisma/client";
+import { PlusCircleIcon } from "lucide-react";
+
 import { useHostDialog } from "@/hooks/useHostDialog";
 import { useSignInDialog } from "@/hooks/useSignInDialog";
-import { User } from "@prisma/client";
 
 import { Button } from "@/components/ui/button";
-import { PlusCircleIcon } from "lucide-react";
 
 interface MobileHostButtonProps {
   currentUser: User | null;

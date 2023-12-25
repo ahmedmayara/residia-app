@@ -2,24 +2,24 @@
 
 import React from "react";
 
-import { Booking, User } from "@prisma/client";
 import Image from "next/image";
-
-import { ShareIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-import { ListingHeading } from "@/components/listing-heading";
-import { SaveButton } from "@/components/save-button";
-import { ListingInfo } from "@/components/listing-info";
-import { ListingBooking } from "@/components/listing-booking";
-import { getListing } from "@/server/get-listing";
-import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
-import { useSignInDialog } from "@/hooks/useSignInDialog";
 import { useRouter } from "next/navigation";
+import { getListing } from "@/server/get-listing";
+import { Booking, User } from "@prisma/client";
 import axios from "axios";
-import { toast } from "sonner";
+import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
+import { ShareIcon } from "lucide-react";
 import { Range } from "react-date-range";
-import { PhotosDrawer } from "./photos-drawer";
+import { toast } from "sonner";
+
+import { useSignInDialog } from "@/hooks/useSignInDialog";
+
+import { Button } from "@/components/ui/button";
+import { ListingBooking } from "@/components/listing-booking";
+import { ListingHeading } from "@/components/listing-heading";
+import { ListingInfo } from "@/components/listing-info";
+import { PhotosDrawer } from "@/components/photos-drawer";
+import { SaveButton } from "@/components/save-button";
 
 interface ListingClientProps {
   bookings?: Booking[];

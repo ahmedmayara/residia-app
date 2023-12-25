@@ -1,11 +1,11 @@
 import React from "react";
 
+import { redirect } from "next/navigation";
+import { getCurrentUser } from "@/server/get-current-user";
+import { getUserFavoritesListings } from "@/server/get-user-favorites-listings";
+
 import { Container } from "@/components/container";
 import { EmptyState } from "@/components/empty-state";
-import { getCurrentUser } from "@/server/get-current-user";
-
-import { redirect } from "next/navigation";
-import { getUserFavoritesListings } from "@/server/get-user-favorites-listings";
 import { ListingCard } from "@/components/listing-card";
 
 export default async function Favorites() {

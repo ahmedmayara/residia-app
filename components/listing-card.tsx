@@ -2,19 +2,21 @@
 
 import React from "react";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Booking, Listing, User } from "@prisma/client";
-import Image from "next/image";
-import { FavoriteButton } from "./favorite-button";
+
 import { useCountries } from "@/hooks/useCountries";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
-import { AspectRatio } from "./ui/aspect-ratio";
+} from "@/components/ui/carousel";
+import { FavoriteButton } from "@/components/favorite-button";
 
 interface ListingCardProps {
   listing: Listing;

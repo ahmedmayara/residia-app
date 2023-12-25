@@ -1,24 +1,24 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 import { Booking, Listing } from "@prisma/client";
-import { useCountries } from "@/hooks/useCountries";
-import { DeletePropertyButton } from "./delete-property-button";
-import { Button } from "@/components/ui/button";
 import { EyeIcon } from "lucide-react";
 
+import { useCountries } from "@/hooks/useCountries";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel";
-import { AspectRatio } from "./ui/aspect-ratio";
+} from "@/components/ui/carousel";
+import { DeletePropertyButton } from "@/components/delete-property-button";
 
 interface PropertyCardProps {
   listing: Listing;

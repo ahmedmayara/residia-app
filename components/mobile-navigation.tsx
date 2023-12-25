@@ -1,18 +1,20 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { User } from "@prisma/client";
 import {
   HeartIcon,
+  LogOutIcon,
   PlaneLandingIcon,
   SearchIcon,
-  WarehouseIcon,
   UserCircleIcon,
-  LogOutIcon,
+  WarehouseIcon,
 } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-import { useSignInDialog } from "@/hooks/useSignInDialog";
 import { signOut } from "next-auth/react";
+
 import { cn } from "@/lib/utils";
+
+import { useSignInDialog } from "@/hooks/useSignInDialog";
 
 interface MobileNavigationProps {
   currentUser: User | null;

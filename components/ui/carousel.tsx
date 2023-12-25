@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import useEmblaCarousel, {
   type EmblaCarouselType as CarouselApi,
   type EmblaOptionsType as CarouselOptions,
@@ -7,6 +8,7 @@ import useEmblaCarousel, {
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+
 import { Button } from "@/components/ui/button";
 
 type CarouselProps = {

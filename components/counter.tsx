@@ -1,7 +1,8 @@
 "use client";
 
-import { MinusIcon, PlusIcon } from "lucide-react";
 import React from "react";
+
+import { MinusIcon, PlusIcon } from "lucide-react";
 
 interface CounterProps {
   title: string;

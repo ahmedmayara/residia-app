@@ -1,25 +1,22 @@
 import { IconType } from "react-icons";
-
-import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
+import { BsSnow } from "react-icons/bs";
+import { FaSkiing } from "react-icons/fa";
 import {
   GiBarn,
   GiBoatFishing,
   GiCactus,
   GiCastle,
   GiCaveEntrance,
+  GiFarmTractor,
   GiForestCamp,
   GiIsland,
   GiWindmill,
 } from "react-icons/gi";
-import { FaSkiing } from "react-icons/fa";
-import { BsSnow } from "react-icons/bs";
-import { IoDiamond } from "react-icons/io5";
+import { IoDiamond, IoKeySharp, IoSparklesSharp } from "react-icons/io5";
+import { LuSofa } from "react-icons/lu";
 import { MdOutlineVilla } from "react-icons/md";
 import { PiPark } from "react-icons/pi";
-import { IoKeySharp } from "react-icons/io5";
-import { LuSofa } from "react-icons/lu";
-import { IoSparklesSharp } from "react-icons/io5";
-import { GiFarmTractor } from "react-icons/gi";
+import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
 
 interface Category {
   label: string;

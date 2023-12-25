@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
+
 import { UploadDropzone } from "@/lib/uploadthing";
 
 import "@uploadthing/react/styles.css";
 
-import { X } from "lucide-react";
 import Image from "next/image";
+import { X } from "lucide-react";
 
 interface ImageUploaderProps {
   endpoint: "imageUploader";

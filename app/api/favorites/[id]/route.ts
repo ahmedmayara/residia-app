@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
-
-import { getCurrentUser } from "@/server/get-current-user";
 import { db } from "@/db/prisma";
+import { getCurrentUser } from "@/server/get-current-user";
 
 interface RouteParams {
   id: string;

@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-
 import { Listing } from "@prisma/client";
-
+import { ChevronLeftIcon, Grid3x3Icon, ShareIcon } from "lucide-react";
 import { Drawer } from "vaul";
 
 import { Button } from "@/components/ui/button";
-import { ChevronLeftIcon, Grid3x3Icon, ShareIcon } from "lucide-react";
 
 interface PhotosDrawerProps {
   listing: Listing;

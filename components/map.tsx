@@ -1,9 +1,10 @@
 import React from "react";
 
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
+
 import { cn } from "@/lib/utils";
 
 const markerIcon = L.icon({ iconUrl: "/images/marker-icon.png" });

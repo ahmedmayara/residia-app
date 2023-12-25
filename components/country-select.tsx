@@ -1,15 +1,15 @@
 "use client";
 
+import { useCountries } from "@/hooks/useCountries";
+
 import {
   Select,
-  SelectTrigger,
   SelectContent,
   SelectGroup,
   SelectItem,
+  SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import { useCountries } from "@/hooks/useCountries";
 
 export interface CountrySelectValue {
   value: string;

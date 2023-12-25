@@ -2,19 +2,21 @@
 
 import React from "react";
 
-import { Dialog } from "./dialog";
-import { useFiltersDialog } from "@/hooks/useFiltersDialog";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Range } from "react-date-range";
 import dynamic from "next/dynamic";
-import { Skeleton } from "../ui/skeleton";
-import { CountrySelect, CountrySelectValue } from "../country-select";
-import qs from "query-string";
-import { DialogHeading } from "./dialog-heading";
-import { Separator } from "../ui/separator";
-import { Calendar } from "../calendar";
+import { useRouter, useSearchParams } from "next/navigation";
 import { formatISO } from "date-fns";
-import { Counter } from "../counter";
+import qs from "query-string";
+import { Range } from "react-date-range";
+
+import { useFiltersDialog } from "@/hooks/useFiltersDialog";
+
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Calendar } from "@/components/calendar";
+import { Counter } from "@/components/counter";
+import { CountrySelect, CountrySelectValue } from "@/components/country-select";
+import { Dialog } from "@/components/dialogs/dialog";
+import { DialogHeading } from "@/components/dialogs/dialog-heading";
 
 enum STEPS {
   LOCATION = 0,

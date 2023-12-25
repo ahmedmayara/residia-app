@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Container } from "@/components/container";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Container } from "@/components/container";
 
 export default async function Loading() {
   return (

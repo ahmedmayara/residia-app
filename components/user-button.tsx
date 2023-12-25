@@ -2,11 +2,16 @@
 
 import React from "react";
 
+import { useRouter } from "next/navigation";
 import { User } from "@prisma/client";
+import { MenuIcon } from "lucide-react";
 import { signOut } from "next-auth/react";
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { MenuIcon } from "lucide-react";
+import { useHostDialog } from "@/hooks/useHostDialog";
+import { useSignInDialog } from "@/hooks/useSignInDialog";
+import { useSignUpDialog } from "@/hooks/useSignUpDialog";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,12 +20,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-import { useSignUpDialog } from "@/hooks/useSignUpDialog";
-import { useSignInDialog } from "@/hooks/useSignInDialog";
-import { useHostDialog } from "@/hooks/useHostDialog";
-
-import { useRouter } from "next/navigation";
 
 interface UserButtonProps {
   currentUser: User | null;

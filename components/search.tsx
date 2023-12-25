@@ -2,11 +2,12 @@
 
 import React from "react";
 
-import { useFiltersDialog } from "@/hooks/useFiltersDialog";
-import { SearchIcon } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { useCountries } from "@/hooks/useCountries";
 import { differenceInDays } from "date-fns";
+import { SearchIcon } from "lucide-react";
+
+import { useCountries } from "@/hooks/useCountries";
+import { useFiltersDialog } from "@/hooks/useFiltersDialog";
 
 export function Search() {
   const filtersDialog = useFiltersDialog();

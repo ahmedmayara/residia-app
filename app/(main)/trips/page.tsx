@@ -1,11 +1,12 @@
 import React from "react";
 
-import { getCurrentUser } from "@/server/get-current-user";
 import { redirect } from "next/navigation";
-import { EmptyState } from "@/components/empty-state";
-import { Container } from "@/components/container";
-import { TripCard } from "@/components/trip-card";
 import { getBookings } from "@/server/get-bookings";
+import { getCurrentUser } from "@/server/get-current-user";
+
+import { Container } from "@/components/container";
+import { EmptyState } from "@/components/empty-state";
+import { TripCard } from "@/components/trip-card";
 
 export default async function Trips() {
   const currentUser = await getCurrentUser();

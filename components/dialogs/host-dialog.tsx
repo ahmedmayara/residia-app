@@ -2,16 +2,17 @@
 
 import React from "react";
 
-import { useHostDialog } from "@/hooks/useHostDialog";
-import { Dialog } from "./dialog";
-import { DialogHeading } from "./dialog-heading";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 import { categories } from "@/constants";
-import { CategoryBox } from "../category-box";
 import { HostHomeSchema, HostHomeSchemaType } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Counter } from "../counter";
-import { Separator } from "@/components/ui/separator";
+import { toast } from "sonner";
+
+import { useHostDialog } from "@/hooks/useHostDialog";
+
 import {
   Form,
   FormControl,
@@ -19,18 +20,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
-import { CountrySelect } from "../country-select";
-import { Textarea } from "../ui/textarea";
-import dynamic from "next/dynamic";
-import { Skeleton } from "../ui/skeleton";
-import { ImageUploader } from "../image-uploader";
-import { PriceInput } from "../price-input";
-import { Label } from "../ui/label";
-import axios from "axios";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Textarea } from "@/components/ui/textarea";
+import { CategoryBox } from "@/components/category-box";
+import { Counter } from "@/components/counter";
+import { CountrySelect } from "@/components/country-select";
+import { Dialog } from "@/components/dialogs/dialog";
+import { DialogHeading } from "@/components/dialogs/dialog-heading";
+import { ImageUploader } from "@/components/image-uploader";
+import { PriceInput } from "@/components/price-input";
 
 enum STEPS {
   CATEGORY = 0,

@@ -3,9 +3,9 @@
 import React from "react";
 
 import { useRouter } from "next/navigation";
+import { FaGhost } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
-import { FaGhost } from "react-icons/fa";
 
 interface EmptyStateProps {
   title: string;

@@ -1,9 +1,10 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "./calendar";
 import { Range } from "react-date-range";
+
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Calendar } from "@/components/calendar";
 
 interface ListingBookingProps {
   price: number;
