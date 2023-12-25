@@ -162,7 +162,7 @@ export function ListingClient({
           </div>
 
           <div className="absolute bottom-4 right-4">
-            <PhotosDrawer listing={listing!} currentUser={currentUser!} />
+            <PhotosDrawer listing={listing!} />
           </div>
         </div>
 

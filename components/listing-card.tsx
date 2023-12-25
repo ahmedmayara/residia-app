@@ -67,8 +67,8 @@ export function ListingCard({
                   <Image
                     src={photo}
                     alt={photo}
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                     className="h-full w-full object-cover object-center"
                     onClick={() => router.push(`/listings/${listing.id}`)}
                   />
