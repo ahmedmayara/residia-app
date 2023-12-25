@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export function constructMetadata({
   title = "Residia - Where Every Journey Finds Its Home.",
   description = "Discover Your Perfect Stay : Residia - Where Every Journey Finds Its Home.",
-  image = "/images/og.png",
+  image = "/images/opengraph.png",
   icons = "/favicon.ico",
   noIndex = false,
 }: {
